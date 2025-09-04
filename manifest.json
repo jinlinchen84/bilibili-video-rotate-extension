@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Rotate Bilibili Video",
+  "version": "1.0",
+  "description": "Click to rotate or restore Bilibili video",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://www.bilibili.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.bilibili.com/video/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
